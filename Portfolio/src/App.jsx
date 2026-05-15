@@ -1,21 +1,26 @@
 import projects from "./data/projects";
-import ProjectCard from "./components/projectcard";
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
+  
   return (
-    <div>
-      <h1>My Portfolio from Front End Development 2026 VT</h1>
 
-      <div class="projects-container">
+    <div>
+      <h1>My Portfolio</h1>
+
+      <div className="projects.conatiner"> 
         {projects.map((project) => (
-          <ProjectCard 
+          <ProjectCard
             key={project.projectname}
             {...project}
-
           />
         ))}
       </div>
     </div>
-
+  );
+}
 
 export default App;
+
+
+
