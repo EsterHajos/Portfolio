@@ -1,25 +1,26 @@
-function Component ({
+function ProjectCard ({
 projectname,
 screenshot,
-githudRepo,
+githubRepo,
 techUsed,
 writeUp,
 projectfunction,
 learned,
 role, 
-challanges,
-})
+challenges,
+}) { 
 
 return (
 <div className="project-card">
 
 <h2>{projectname}</h2>
 
-<img src={screenshot} alt={projectname} /> //lägg till storlek på bilden om de behövs
+<img src={screenshot} alt={projectname} /> {/*lägg till storlek på bilden om de behövs*/}
 
-<a href={githudRepo}>GitHub Repository link</a>
 
-<p>Tech Used: {techUsed.join(', ')}</p>
+<a href={githubRepo}>GitHub Repository link</a>
+
+<p>Tech Used: {techUsed.toString()}</p>  //array remember to string//
 
 <p>About the project: {writeUp}</p>
 
@@ -29,9 +30,12 @@ return (
 
 <p>My project role: {role}</p>
 
-<p>Challenges: {challanges}</p>
+<p>Challenges: {challenges}</p>
 
 </div>
 );
 
-export default Component;
+}
+
+
+export default ProjectCard;
