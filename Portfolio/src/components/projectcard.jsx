@@ -15,12 +15,11 @@ return (
 
 <h2>{projectname}</h2>
 
-<img src={screenshot} alt={projectname} /> {/*lägg till storlek på bilden om de behövs*/}
-
+<img src={screenshot} alt={projectname} > </img>
 
 <a href={githubRepo}>GitHub Repository link</a>
 
-<p>Tech Used: {techUsed.toString()}</p>  //array remember to string//
+<p>Tech Used: {techUsed.toString()}</p>  
 
 <p>About the project: {writeUp}</p>
 
