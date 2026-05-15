@@ -1,4 +1,4 @@
-function ProjectCard ({
+function projectcard ({
 projectname,
 screenshot,
 githubRepo,
@@ -37,4 +37,4 @@ return (
 }
 
 
-export default ProjectCard;
+export default projectcard;

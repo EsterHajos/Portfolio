@@ -1,8 +1,7 @@
 import projects from "./data/projects";
-import ProjectCard from "./components/ProjectCard";
+import projectcard from "./components/projectcard";
 
 function App() {
-  
   return (
 
     <div>
@@ -19,6 +18,7 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
 
