@@ -1,40 +1,45 @@
-function projectcard ({
-projectname,
-screenshot,
-githubRepo,
-techUsed,
-writeUp,
-projectfunction,
-learned,
-role, 
-challenges,
-}) { 
+function Projectcard({
+  projectname,
+  screenshot,
+  githubRepo,
+  techUsed,
+  writeUp,
+  projectfunction,
+  learned,
+  role,
+  challenges,
+}) {
+  return (
+    <div className="project-card">
 
-return (
-<div className="project-card">
+      <h2>{projectname}</h2>
 
-<h2>{projectname}</h2>
+      {screenshot && (
+        <img src={screenshot} alt={projectname} />
+      )}
 
-<img src={screenshot} alt={projectname} > </img>
+      {githubRepo && (
+        <a href={githubRepo} target="_blank" rel="noreferrer">
+          GitHub Repository link
+        </a>
+      )}
 
-<a href={githubRepo}>GitHub Repository link</a>
+      <p>
+        Tech Used: {Array.isArray(techUsed) ? techUsed.join(", ") : techUsed}
+      </p>
 
-<p>Tech Used: {techUsed.toString()}</p>  
+      <p>About the project: {writeUp}</p>
 
-<p>About the project: {writeUp}</p>
+      <p>What the project does: {projectfunction}</p>
 
-<p>What the project does: {projectfunction}</p>
+      <p>What I learned: {learned}</p>
 
-<p>What I learned: {learned}</p>
+      <p>My project role: {role}</p>
 
-<p>My project role: {role}</p>
+      <p>Challenges: {challenges}</p>
 
-<p>Challenges: {challenges}</p>
-
-</div>
-);
-
+    </div>
+  );
 }
 
-
-export default projectcard;
+export default Projectcard;

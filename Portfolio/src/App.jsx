@@ -1,15 +1,14 @@
-import projects from "./data/projects";
-import projectcard from "./components/projectcard";
+import Projects from "./data/Projects";
+import Projectcard from "./components/Projectcard";
 
 function App() {
   return (
-
     <div>
       <h1>My Portfolio</h1>
 
-      <div className="projects.conatiner"> 
-        {projects.map((project) => (
-          <projectCard
+      <div className="projects-container">
+        {Projects.map((project) => (
+          <Projectcard
             key={project.projectname}
             {...project}
           />
@@ -19,8 +18,4 @@ function App() {
   );
 }
 
-
 export default App;
-
-
-
