@@ -9,7 +9,7 @@ function App() {
 
       <div className="projects.conatiner"> 
         {projects.map((project) => (
-          <ProjectCard
+          <projectCard
             key={project.projectname}
             {...project}
           />

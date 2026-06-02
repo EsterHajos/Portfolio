@@ -3,7 +3,7 @@
 const projects = [
     {
     projectname: "Project 1",
-    screenshot: "path/to/screenshot1.png",
+    screenshot: "",
     githubRepo: "link!",
     techUsed: ["React", "Node.js", "Express"],
     writeUp: "This is a project about...",
@@ -14,8 +14,8 @@ const projects = [
     },
 
     {   
-    projectname: "Project 1",
-    screenshot: "path/to/screenshot1.png",
+    projectname: "Project 2",
+    screenshot: "",
     githubRepo: "link!",
     techUsed: ["React", "Node.js", "Express"],
     writeUp: "This is a project about...",
