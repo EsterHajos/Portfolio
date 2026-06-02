@@ -1,7 +1,7 @@
 const projects = [
   {
     projectname: "Esters 1st HTML - HTML lesson 1",
-    screenshot: "/images/esters1sthtml.png",
+    screenshot: "/images/proj1.png",
     githubRepo: "https://github.com/EsterHajos/esters1sthtml.git",
     techUsed: ["HTML"],
     writeUp: "This was my absolute first assignment when starting Front End Development. Here we just started with learning how to create an index.html file and how to use basic HTML tags. I created a simple webpage about myself with a header, a paragraph, an image and a link.",
@@ -13,7 +13,7 @@ const projects = [
 
   {
     projectname: "Figma lesson 4",
-    screenshot: "/images/figma4.png",
+    screenshot: "/images/figma4design.png",
     githubRepo: "https://github.com/EsterHajos/figma4.git",
     techUsed: ["HTML", "CSS"],
     writeUp: "This is a project where we had to recreate a design from Figma using HTML and CSS. I chose to recreate a design of a website for a music festival. The design was quite simple but it was a good exercise to practice using CSS to style a webpage.",
