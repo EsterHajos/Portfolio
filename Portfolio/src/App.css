@@ -1,14 +1,15 @@
 .project-card {
   width: 500px;
-  margin: 40 px auto;
+  margin: 40px auto;
   padding: 20px;
-  boarder: 1px solid #365352;
-  boarder-radius: 10px;
+  border: 1px solid #365352;
+  border-radius: 10px;
   background-color: rgb(183, 201, 201);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: Arial, Helvetica, sans-serif;
 }
-<!-- hitta färger och format jag vill ha -->
+
+/* hitta färger och format jag vill ha */
 
 .project-card img {
   width: 100%;
