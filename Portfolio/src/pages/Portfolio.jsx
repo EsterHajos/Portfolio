@@ -19,13 +19,18 @@ function Portfolio() {
     <div>
       <h1>My Portfolio</h1>
 
-      <input type="text" placeholder="Search in projects..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+      <input value={tempSearch} onChange={(e) => setTempSearch(e.target.value)} />
+      <button onClick={() => setSearchTerm(tempSearch)}>Search</button>
 
+      
+
+      <div>
        <button onClick={() => {
         setShowProjects(!showProjects); setSelectedProject(null);
       }}>
           {showProjects ? "Hide Projects" : "Show Projects"}
         </button>
+      </div>  
 
          {showProjects && (
         <div className="projects-container">
