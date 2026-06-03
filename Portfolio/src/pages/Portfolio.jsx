@@ -17,7 +17,8 @@ function Portfolio() {
 
   const handleSearch = () => {
     const term = tempSearch.toLowerCase().trim();
-    if (term) return;
+    if (!term) return;
+  
     const results = projects.filter((project) =>
       project.projectname.toLowerCase().includes(term)
     );
