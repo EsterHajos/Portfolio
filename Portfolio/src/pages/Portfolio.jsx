@@ -11,12 +11,24 @@ function Portfolio() {
   const [tempSearch, setTempSearch] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredProjects = projects.filter(project =>
+  const filteredProjects = projects.filter((project) =>
     project.projectname.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleSearch = () => {
-    setSearchTerm(tempSearch);
+    const term = tempSearch.toLowerCase().trim();
+    if (term) return;
+    const results = projects.filter((project) =>
+      project.projectname.toLowerCase().includes(term)
+    );
+
+    if (results.length === 0) {
+      alert("No match found");
+      return;
+    }
+
+    setSearchTerm(term);
+    
   }
 
   return ( 
@@ -37,10 +49,11 @@ function Portfolio() {
       <input placeholder="Search after project name" value={tempSearch} onChange={(e) => setTempSearch(e.target.value)} />
       <button onClick={handleSearch}>Search</button>
       </div>
+  
 
          {showProjects && (
         <div className="projects-container">
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <Projectcard
               key={project.projectname}
               projectname={project.projectname}
