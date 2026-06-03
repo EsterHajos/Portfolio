@@ -16,7 +16,6 @@ onClose,
 {    return (
         <div className="popup">
             <div className="popup-content">
-                <button onClick={onClose}>Close</button>
 
                 <h2>{projectname}</h2>
                 <img src={screenshot} alt={`${projectname} screenshot`} />
@@ -27,6 +26,8 @@ onClose,
                 <p>{learned}</p>
                 <p>{role}</p>
                 <p>{challanges}</p>
+
+                <button onClick={onClose}>Close</button>
                 
             </div>
         </div>
