@@ -8,11 +8,18 @@ import Popup from "../components/Popup";
 function Portfolio() {
   const [showProjects, setShowProjects] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredProjects = projects.filter(project =>
+    project.projectname.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return ( 
 
     <div>
       <h1>My Portfolio</h1>
+
+      <input type="text" placeholder="Search in projects..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
 
        <button onClick={() => {
         setShowProjects(!showProjects); setSelectedProject(null);
