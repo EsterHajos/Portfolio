@@ -20,9 +20,9 @@ function Portfolio() {
 
          {showProjects && (
         <div className="projects-container">
-          {projects.map((project, index) => (
-            <div key={index} onClick={() => setSelectedProject(project)}>
-              <Projectcard {...project} />
+          {projects.map((project) => (
+            <div key={project.projectname} onClick={() => setSelectedProject(project)}>
+              <Projectcard projectname={project.projectname} />
             </div>
           ))}
         </div>
