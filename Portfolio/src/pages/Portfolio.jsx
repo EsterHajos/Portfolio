@@ -8,21 +8,22 @@ import Popup from "../components/Popup";
 function Portfolio() {
   const [showProjects, setShowProjects] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [tempSearch, setTempSearch] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredProjects = projects.filter(project =>
     project.projectname.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const handleSearch = () => {
+    setSearchTerm(tempSearch);
+  }
+
   return ( 
 
     <div>
       <h1>My Portfolio</h1>
 
-      <input value={tempSearch} onChange={(e) => setTempSearch(e.target.value)} />
-      <button onClick={() => setSearchTerm(tempSearch)}>Search</button>
-
-      
 
       <div>
        <button onClick={() => {
@@ -31,6 +32,11 @@ function Portfolio() {
           {showProjects ? "Hide Projects" : "Show Projects"}
         </button>
       </div>  
+
+      <div>
+      <input placeholder="Search after project name" value={tempSearch} onChange={(e) => setTempSearch(e.target.value)} />
+      <button onClick={handleSearch}>Search</button>
+      </div>
 
          {showProjects && (
         <div className="projects-container">
