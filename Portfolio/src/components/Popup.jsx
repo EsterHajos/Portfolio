@@ -16,19 +16,18 @@ onClose,
 {    return (
         <div className="popup">
             <div className="popup-content">
+                <button onClick={onClose}>Close</button>
 
                 <h2>{projectname}</h2>
                 <img src={screenshot} alt={`${projectname} screenshot`} />
-                <p><strong>GitHub Repository:</strong> <a href={githubRepo} target="_blank" rel="noopener noreferrer">{githubRepo}</a></p>
-                <p><strong>Technologies Used:</strong> {techUsed}</p>
-                <p><strong>Write-Up:</strong> {writeUp}</p>
-                <p><strong>Project Function:</strong> {projectfunction}</p>
-                <p><strong>What I Learned:</strong> {learned}</p>
-                <p><strong>My Role:</strong> {role}</p>
-                <p><strong>Challenges Faced:</strong> {challanges}</p>
+                <a href={githubRepo} target="_blank" rel="noreferrer">GitHub Repository</a>
+                <p>{techUsed}</p>
+                <p>{writeUp}</p>
+                <p>{projectfunction}</p>
+                <p>{learned}</p>
+                <p>{role}</p>
+                <p>{challanges}</p>
                 
-                <button onClick={onClose}>Close</button>
-
             </div>
         </div>
     );

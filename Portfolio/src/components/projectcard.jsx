@@ -1,4 +1,4 @@
-function Projectcard({
+/* function Projectcard({
   projectname,
   screenshot,
   githubRepo,
@@ -38,6 +38,17 @@ function Projectcard({
 
       <p>Challenges: {challenges}</p>
 
+    </div>
+  );
+}
+
+export default Projectcard; */
+
+
+function Projectcard({ projectname, onClick }) {
+  return (
+    <div className="project-card" onClick={onClick}>
+      <h2>{projectname}</h2>
     </div>
   );
 }
