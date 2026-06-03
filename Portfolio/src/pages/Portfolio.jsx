@@ -1,6 +1,7 @@
 import { useState } from "react";
 import projects from "../data/projects";
 import Projectcard from "../components/Projectcard";
+import Popup from "../components/Popup";
 
 
 
