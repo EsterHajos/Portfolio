@@ -6,23 +6,28 @@ import Popup from "../components/Popup";
 
 
 function Portfolio() {
-const [selectedProject, setSelectedProject] = useState(null);
+  const [showProjects, setShowProjects] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return ( 
 
     <div>
       <h1>My Portfolio</h1>
-      <div className="project-container">
-        {projects.map((project) => (
-          <div key={project.projectname}
-            onClick={() => setSelectedProject(project)} 
-            >
-          <Projectcard {...project} />
 
-          </div>
-        ))}
-      </div>
+      <button onClick={() => setShowProjects(!showProjects)}>
+          {showProjects ? "Hide Projects" : "Show Projects"}
+        </button>
 
+         {showProjects && (
+        <div className="projects-container">
+          {projects.map((project, index) => (
+            <div key={index} onClick={() => setSelectedProject(project)}>
+              <Projectcard {...project} />
+            </div>
+          ))}
+        </div>
+      )}
+  
       {selectedProject && (
         <Popup 
          {...selectedProject}
