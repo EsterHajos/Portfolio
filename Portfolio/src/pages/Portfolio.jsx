@@ -14,7 +14,9 @@ function Portfolio() {
     <div>
       <h1>My Portfolio</h1>
 
-      <button onClick={() => setShowProjects(!showProjects)}>
+      <button onClick={() => {
+        setShowProjects(!showProjects); setSelectedProject(null);
+      }}>
           {showProjects ? "Hide Projects" : "Show Projects"}
         </button>
 
